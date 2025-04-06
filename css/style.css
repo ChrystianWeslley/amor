@@ -22,7 +22,6 @@ h1{
     align-items: center;
     justify-content: center;
     z-index: 20;
-    height: 110vh;
 }
 
 #startBtn {
@@ -223,11 +222,11 @@ h1{
 }
 
 .heart {
-    position: absolute;
+    position: relative;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23e60026' d='M471.7 73.1C439.6 40.1 391.1 24 343.4 24c-47.7 0-96.2 16.1-128.3 49.1L256 64l-40.9-8.9C183.1 40.1 134.6 24 86.9 24 39.2 24-9.3 40.1-41.4 73.1-73.5 106.2-89.6 154.6-89.6 202.3c0 47.7 16.1 96.2 49.1 128.3l207.5 207.5c6.2 6.2 16.4 6.2 22.6 0L472.6 330.6c33-32.1 49.1-80.6 49.1-128.3 0-47.7-16.1-96.2-49.1-129.2z'/%3E%3C/svg%3E")
         no-repeat center/contain;
     animation: explode 3s ease-out forwards;
-    opacity: 0.95;
+    opacity: 1;
 }
 
 @keyframes explode {
