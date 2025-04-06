@@ -14,6 +14,7 @@ h1{
     padding: 10px 20px;
     text-align: center;
 }
+
 .intro-screen {
     position: absolute;
     inset: 0;
@@ -22,7 +23,7 @@ h1{
     align-items: center;
     justify-content: center;
     z-index: 20;
-    height: 109vh;
+    height: 110vh;
 }
 
 #startBtn {
