@@ -5,182 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantic Music & Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            justify-content: center;
-        }
-
-        .start-screen {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 20;
-        }
-
-        .heart-button {
-            background: none;
-            border: none;
-            font-size: 50px;
-            color: red;
-            cursor: pointer;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .player {
-            width: 100%;
-            height: 10%;
-            background: #ff7272;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            color: white;
-            z-index: 10;
-        }
-
-        .player .music-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .player img {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-        }
-
-        .player span {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .carousel {
-            margin-top: 0px;
-            width: 90%;
-            max-width: 600px;
-            overflow: hidden;
-            position: relative;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: none;
-            border-radius: 10px;
-        }
-
-        .carousel img.active {
-            display: block;
-            animation: fade 3s ease-in-out;
-        }
-
-        @keyframes fade {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 600px) {
-            .player {
-                flex-direction: column;
-                text-align: center;
-            }
-            .player .music-info {
-                flex-direction: column;
-            }
-            .player img {
-                width: 40px;
-                height: 40px;
-            }
-            .carousel img {
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="start-screen" id="startScreen">
-        <button class="heart-button" id="heartButton">❤️</button>
-    </div>
-
-    <div class="player hidden" id="playerContainer">
-        <div class="music-info">
-            <img src="musica.png" alt="Capa da Música">
-            <span>Aliaça os Tribalistas</span>
-        </div>
-        <audio id="audio" loop>
-            <source src="musica.mp3" type="audio/mpeg">
-        </audio>
+    <div class="intro-screen" id="introScreen">
+        <button id="startBtn"><i class="fa-solid fa-heart"></i></button>
+        
     </div>
     
-    <div class="carousel hidden" id="carouselContainer">
-        <img src="imagem1.jpeg" class="active">
-        <img src="imagem2.jpeg">
-        <img src="imagem3.jpeg">
-        <img src="imagem4.jpeg">
+    <div class="content hidden" id="content">
+        <div class="player">
+            <div class="cover-info">
+                <img src="img/alianca.jfif" alt="Capa da Música">
+                <div class="track-info">
+                    <strong>Aliança</strong>
+                    <span>Tribalistas</span>
+                    <div class="preview-tag">Prévia</div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="playBtn"><i class="fa fa-play"></i></button>
+            </div>
+            <audio id="audio" loop>
+                <source src="musica.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="carousel">
+            <img src="img/imagem_2.jpeg" class="active">
+            <img src="img/imagem_3.jpeg">
+            <img src="img/imagem_4.jpeg">
+            <img src="img/imagem_5.jpeg">
+            <img src="img/imagem_6.jpeg">
+            <img src="img/imagem_7.jpeg">
+            <img src="img/imagem_8.jpeg">
+            <img src="img/imagem_9.jpeg">
+            <img src="img/imagem_10.jpeg">
+            <img src="img/imagem_11.jpeg">
+            <img src="img/imagem_12.jpeg">
+            <img src="img/imagem_14.jpeg">
+            <img src="img/imagem_15.jpeg">
+            <img src="img/imagem_16.jpeg">
+            <img src="img/imagem_17.jpeg">
+            <img src="img/imagem_18.jpeg">
+            <img src="img/imagem_19.jpeg">
+            <img src="img/imagem_20.jpeg">
+            <img src="img/imagem_21.jpeg">
+            <img src="img/imagem_22.jpeg">
+            <img src="img/imagem_23.jpeg">
+            <img src="img/imagem_24.jpeg">
+            <img src="img/imagem_25.jpeg">
+            <img src="img/imagem_26.jpeg">
+            <img src="img/imagem_27.jpeg">
+            <img src="img/imagem_28.jpeg">
+            <img src="img/imagem_29.jpeg">
+            <img src="img/imagem_30.jpeg">
+            <img src="img/imagem_31.jpeg">
+            <img src="img/imagem_32.jpeg">
+            <img src="img/imagem_33.jpeg">
+            <img src="img/imagem_34.jpeg">
+            <img src="img/imagem_35.jpeg">
+            <img src="img/imagem_36.jpeg">
+
+        </div>
     </div>
 
-    <h1>Feliz 1 Ano meu amor</h1>
-    <h2>Amo você</h2>
-    <a>❤️</a>
-    <script>
-        let index = 0;
-        const images = document.querySelectorAll(".carousel img");
-        const audio = document.getElementById("audio");
-        const heartButton = document.getElementById("heartButton");
-        const startScreen = document.getElementById("startScreen");
-        const playerContainer = document.getElementById("playerContainer");
-        const carouselContainer = document.getElementById("carouselContainer");
+    <div class="text">
+        <h1>Feliz 1 Ano meu amor</h1>
+        <p>Feliz um ano, meu amor!<br>
+            Muita coisa aconteceu e passou nesse primeiro ano juntos, e eu só tenho a agradecer a Deus por ter colocado alguém tão incrível como você na minha vida.
+            Tudo o que vivemos e enfrentamos lado a lado só fortaleceu ainda mais o que sentimos um pelo outro.
+            Eu te amo infinitamente.<br>Você é a minha felicidade. </p>
+        <h2>❤️</h2>
+    </div>
 
-        function changeImage() {
-            images[index].classList.remove("active");
-            index = (index + 1) % images.length;
-            images[index].classList.add("active");
-        }
+    
+    <div class="container">
+        <h1>Compartilhando momentos há</h1>
+        <div class="box"><span id="anos">0</span><small>anos</small></div>
+        <div class="box"><span id="meses">0</span><small>meses</small></div>
+        <div class="box"><span id="dias">0</span><small>dias</small></div>
+        <div class="box"><span id="horas">0</span><small>horas</small></div>
+        <div class="box"><span id="minutos">0</span><small>minutos</small></div>
+        <div class="box"><span id="segundos">0</span><small>segundos</small></div>
+    </div>
+    <div class="cor">
+        <br>
+        <br>
+    </div>
+    <div class="heart-container" id="heartContainer"></div>
 
-        setInterval(changeImage, 4000);
-
-        function startExperience() {
-            startScreen.classList.add("hidden");
-            playerContainer.classList.remove("hidden");
-            carouselContainer.classList.remove("hidden");
-            
-            audio.currentTime = 25;
-            audio.play().catch(error => console.log("Erro ao reproduzir áudio: ", error));
-        }
-
-        heartButton.addEventListener("click", startExperience);
-    </script>
+    <script src="/js/scrript.js"></script>
 </body>
 </html>
